@@ -1,0 +1,23 @@
+<div class="conteiner">
+  <div class="row">
+    <div class="col-md-12">
+    <br>
+      <form>
+
+    <input type="text" name="cityName" placeholder="Ingresa tu ciudad">
+    <input type="submit" class="btn btn-submit btn-success" name="Enviar" value="Buscar">
+
+</form>
+      <br>
+
+      <h1>Ciudad</h1>
+      <h2>{{myWeather.temp}}</h2>
+      <div class="img">
+        <img src="{{myWeather.icon}}">
+        <h3>{{myWeather.weatherKind}}</h3>
+        <h4>{{myWeather.tempMax}}</h4>
+        <h4>{{myWeather.tempMin}}</h4>
+      </div>
+    </div>
+  </div>
+</div>
