@@ -19,17 +19,11 @@ export class CurrentComponent implements OnInit {
 
   ngOnInit() {
 
-  		this.route.data.subscribe(
-
-  				(data:{myWeather:CurrentWeather}) => {
-
-
-  					this.myWeather = data.myWeather;
-
-
-  				}
-
-  			)
+      this.route.data.subscribe(
+        (data:{myWeather:CurrentWeather})=>{
+        this.myWeather = data.myWeather;
+      }
+    )
 
   }
 
