@@ -36,7 +36,7 @@ export class CurrentComponent implements OnInit {
 
   onSubmit(weatherForm:NgForm){
 
-  			this.ws.anotherCity(weatherForm.value.city).subscribe(
+  			this.ws.anotherCity(weatherForm.value.city, weatherForm.value.country).subscribe(
 
   				(data) => {
 

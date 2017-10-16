@@ -19,7 +19,9 @@ export class ForecastComponent implements OnInit {
   ngOnInit() {
 
   	this.forecastForm = new FormGroup({
-  		forecastCity: new FormControl('')
+  		
+  		forecastCity: new FormControl(''),
+  		forecastCountry: new FormControl('')
 
   	})
   }
@@ -27,7 +29,7 @@ export class ForecastComponent implements OnInit {
   onSubmit(){
 
   	console.log(this.forecastForm);
-  	this.weatherService.fiveForecast(this.forecastForm.value.forecastCity).subscribe(
+  	this.weatherService.fiveForecast(this.forecastForm.value.forecastCity, this.forecastForm.value.forecastCountry).subscribe(
 
   			(data) => {
 
