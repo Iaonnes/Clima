@@ -1,23 +1,28 @@
-<div class="conteiner">
+<div class="container">
   <div class="row">
-    <div class="col-md-12">
+    <div class="col-md-12 text-uppercase ">
     <br>
-      <form>
 
-    <input type="text" name="cityName" placeholder="Ingresa tu ciudad">
-    <input type="submit" class="btn btn-submit btn-success" name="Enviar" value="Buscar">
+
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+    <input type="text" ngModel name="city" placeholder="Añadir Ciudad">
+    <button name="btn">Buscar</button>
 
 </form>
-      <br>
 
-      <h1>{{myWeather.cityName}}</h1>
-      <h2>{{myWeather.temp}}&deg;</h2>
-      <div class="img">
+      <br>
+      <div class="img-responsive ">
+        <h1>{{myWeather.cityName}} {{myWeather.temp}}&deg;</h1><br>
         <img src="http://openweathermap.org/img/w/{{myWeather.icon}}.png">
-        <h3>{{myWeather.weatherKind}}</h3>
-        <h4>Max:{{myWeather.tempMax}}&deg;</h4>
-        <h4>Min:{{myWeather.tempMin}}&deg;</h4>
       </div>
+
+      <div class="">
+        <h3>{{myWeather.weatherKind}}</h3><br>
+        <h4>Temperatura Max:&nbsp;{{myWeather.tempMax}}&deg;</h4>
+        <h4>Temperatura Min:&nbsp;{{myWeather.tempMin}}&deg;</h4>
+      </div>
+
     </div>
   </div>
 </div>

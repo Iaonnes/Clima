@@ -50,5 +50,15 @@ export class WeatherService {
 
   }
 
+  anotherCity(city:string){
+
+      return this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=67b8857f6c6d337850b4044caa235879&units=metric`).map((response:Response) => response.json());
+
+  }
+
+  fiveForecast(city:string){
+      return this.http.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=67b8857f6c6d337850b4044caa235879&unit=metric`).map((response:Response) => response.json());
+  }
+
 }
 	

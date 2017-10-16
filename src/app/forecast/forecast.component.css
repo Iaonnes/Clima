@@ -1,0 +1,23 @@
+.day{
+	display: inline;
+	margin-left: 8%;
+	float:left; 
+	display:block;
+}
+.icon{
+	margin: 10px;
+}
+.temp{
+	display: inline;
+	margin-left: 10px;
+	float:left; 
+	display:block;
+}
+
+img{
+	width: 100px;
+	height: 100px;
+}
+h3{
+	display: inline;
+}	
