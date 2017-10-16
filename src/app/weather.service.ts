@@ -27,14 +27,14 @@ export class WeatherService {
         .map((response:Response) => response.json()).subscribe((data) => {
 
                 console.log(data);
-                
+
 
                 this.myWeather = new CurrentWeather ( data.name,
                                                       data.main.temp,
                                                       data.weather[0].icon,
                                                       data.weather[0].description,
                                                       data.main.temp_max,
-                                                      data.main.temp_min ); 
+                                                      data.main.temp_min );
 
 
                 res(this.myWeather);
@@ -43,7 +43,7 @@ export class WeatherService {
 
           )
 
-        
+
       })
 
     })
@@ -60,5 +60,5 @@ export class WeatherService {
       return this.http.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=67b8857f6c6d337850b4044caa235879&unit=metric`).map((response:Response) => response.json());
   }
 
+
 }
-	

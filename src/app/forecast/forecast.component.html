@@ -10,64 +10,23 @@
 
 </form>
 
-<br>
+<br><br>
 
- <div class="img-responsive ">
-        <h1>NameCity</h1><br>
- </div>
+<div class="containers col-xs-12">
 
-<div class="containers col-md-12">
+   <div class="day" *ngFor="let day of cityForecast">
 
-   <div class="day">
-    <h2>Date:</h2>
-     <div class="icon">
-       <img src="http://openweathermap.org/img/w/10d.png" alt="">
-     </div>
-    <div class="temp">
-       <h3>Max:&nbsp;</h3>
-       <h3>&nbsp;Min:</h3>
-     </div>
-  </div>
-   <div class="day">
-    <h2>Date:</h2>
-     <div class="icon">
-       <img src="http://openweathermap.org/img/w/10d.png" alt="">
-     </div>
-    <div class="temp">
-       <h3>Max:&nbsp;</h3>
-       <h3>&nbsp;Min:</h3>
-     </div>
-  </div>   <div class="day">
-    <h2>Date:</h2>
-     <div class="icon">
-       <img src="http://openweathermap.org/img/w/10d.png" alt="">
-     </div>
-    <div class="temp">
-       <h3>Max:&nbsp;</h3>
-       <h3>&nbsp;Min:</h3>
-     </div>
-  </div>
-     <div class="day">
-    <h2>Date:</h2>
-     <div class="icon">
-       <img src="http://openweathermap.org/img/w/10d.png" alt="">
-     </div>
-    <div class="temp">
-       <h3>Max:&nbsp;</h3>
-       <h3>&nbsp;Min:</h3>
-     </div>
-  </div>
-     <div class="day">
-    <h2>Date:</h2>
-     <div class="icon">
-       <img src="http://openweathermap.org/img/w/10d.png" alt="">
-     </div>
-    <div class="temp">
-       <h3>Max:&nbsp;</h3>
-       <h3>&nbsp;Min:</h3>
-     </div>
-  </div>
+    <h3>{{day.date | date: MMMMd}}</h3>
 
- 
+     <div class="icon">
+       <img src="http://openweathermap.org/img/w/{{day.icon}}.png">
+     </div>
+
+    <div class="temp">
+       <h4>Max:{{day.temp_max}}&deg;&nbsp;</h4>
+       <h4>&nbsp;Min:{{day.temp_min}}&deg;</h4>
+    </div>
+
+  </div>
 
 </div>
