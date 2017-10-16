@@ -10,6 +10,8 @@ import { ForecastComponent } from './forecast/forecast.component';
 import { weatherRouting } from './weather.routing';
 import { WeatherService } from './weather.service';
 import { ResolveLocationService } from './resolve-location.service';
+import { AdministrationComponent } from './administration/administration.component';
+
 
 
 
@@ -20,6 +22,7 @@ import { ResolveLocationService } from './resolve-location.service';
     HeaderComponent,
     CurrentComponent,
     ForecastComponent,
+    AdministrationComponent
 
   ],
   imports: [

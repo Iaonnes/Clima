@@ -4,8 +4,8 @@
 
 <form [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
 
-    <input type="text" formControlName="forecastCity">
-    <input type="text" formControlName="forecastCountry">
+    <input type="text" formControlName="forecastCity" placeholder="Ingresa la ciudad">
+    <input type="text" formControlName="forecastCountry" placeholder="Ingresa el pais">
     <button name="btn">Buscar</button>
 
 </form>
@@ -25,6 +25,8 @@
     <div class="temp">
        <h4>Max:{{day.temp_max}}&deg;&nbsp;</h4>
        <h4>&nbsp;Min:{{day.temp_min}}&deg;</h4>
+       <h4>hum:{{day.humidity}} %</h4>
+       <h4>viento:{{day.speed}} k/h</h4>
     </div>
 
   </div>

@@ -57,7 +57,7 @@ export class WeatherService {
   }
 
   fiveForecast(city:string,country:string){
-      return this.http.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=67b8857f6c6d337850b4044caa235879&unit=metric`).map((response:Response) => response.json());
+      return this.http.get(`http://api.openweathermap.org/data/2.5/forecast?q=${city},${country}&appid=67b8857f6c6d337850b4044caa235879&units=metric`).map((response:Response) => response.json());
   }
 
 

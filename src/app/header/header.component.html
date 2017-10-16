@@ -5,8 +5,9 @@
     </div>
     <div class="collapse navbar-collapse">
       <ul class="nav navbar-nav">
-        <li><a [routerLink]="['/']">Clima Actual</a></li>
-        <li><a [routerLink]="['forecast']">Administración de Ciudades</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['/']">Clima Actual</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['forecast']">Pronostico 5 dias</a></li>
+        <li routerLinkActive="active"><a [routerLink]="['administration']">Administracion</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
@@ -20,4 +21,3 @@
     </div>
   </div>
 </nav>
-
