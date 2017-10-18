@@ -6,17 +6,18 @@
   <div class="col-xs-12">
     <form  [formGroup]="addForm" (ngSubmit)="onAdd()">
       <div class="row">
-        <div class="col-sm-7 form-group">
+        <div class="col-sm-6 form-group">
           <label for="name" class="from-control"></label>
           <input formControlName="city" type="text" class="form-control" placeholder="Ingresa la ciudad a agregar">
         </div>
-        <div class="col-sm-5 form-group">
+        <div class="col-sm-6 form-group">
           <label for="name" class="from-control"></label>
-          <input formControlName="Country" type="text" class="form-control" placeholder="Ingresa el pais">
+          <input formControlName="Country" type="text" class="form-control" placeholder="Ingresa el pais" >
         </div>
       </div>
       <div class="row">
-        <div class="col-xs-12">
+
+        <div class="col-sm-12 form-group">
           <button class="btn btn-success" type="submit">Agregar</button>
           <button class="btn btn-danger " type="button">Eliminar</button>
         </div>
@@ -24,21 +25,19 @@
         <br><br>
         <br><br>
 
-        <div class="row text-center">
-          <div class="col-xs-12 form-group list-group-item" *ngFor="let save of addCity">
-            <div>
-              <h2>{{save.name}} {{save.temp}}&deg;</h2>
-            </div>
-            <div>
-              <span>Max:&nbsp;{{save.temp_max}}&deg;</span>
-              <span>Min:&nbsp;{{save.temp_min}}&deg;</span>
-            </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-xs-12 form-group list-group-item" *ngFor="let save of addCity">
+          <div>
+            <h2>{{save.name}} {{save.temp}}&deg;</h2>
+          </div>
+          <div>
+            <span>Max:&nbsp;{{save.temp_max}}&deg;</span>
+            <span>Min:&nbsp;{{save.temp_min}}&deg;</span>
           </div>
         </div>
-
-
-
       </div>
+
     </form>
   </div>
 </div>
