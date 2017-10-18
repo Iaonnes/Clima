@@ -1,0 +1,7 @@
+nav {
+  background: url("http://www.frontendfactory.es/wp-content/uploads/2015/07/safari.jpg") no-repeat center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

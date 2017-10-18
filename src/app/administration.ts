@@ -1,6 +1,8 @@
 export class SearchCity {
 
-	constructor(public date:string,
+	constructor(
+				public name:string,
+				public temp:string,
 				public temp_max:string,
 				public temp_min:string){
 

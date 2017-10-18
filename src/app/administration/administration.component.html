@@ -7,31 +7,36 @@
 
 <h1>Ciudades</h1>
 
-   <form class="form-inline " (ngSubmit)="onAdd(form)" #form="ngForm">
-      
-      <div class="form-inline container-fluid">
-        
-        <input class="form-control" type="text" ngModel name="addCity" placeholder="Ciudad">
-        <input class="form-control" type="text" ngModel name="addCountry" placeholder="Pais">
-        <button class=" btn btn-default" name="btn">Agregar</button>
+   <form class="form-inline " [formGroup]="addForm" (ngSubmit)="onAdd()">
+
+      <div class="form-group container-fluid">
+
+        <input class="form-control" type="text" formControlName="city" placeholder="Ciudad">
+        <input class="form-control" type="text" formControlName="Country" placeholder="Pais">
+        <button class=" btn btn-success" name="btn">Agregar</button>
+        <button class=" btn btn-danger" name="btn">Eliminar</button>
 
       </div>
    </form>
 
       <br>
 
-      <div class="form-group container-fluid">
+      <div class="container ">
 
-        <h2>City{{myWeather.cityName}} {{myWeather.temp}}&deg;</h2><br>
+        <div class="form-group container-fluid list-group-item" *ngFor="let save of addCity">
 
-        <h3>{{myWeather.weatherKind}}</h3><br>
+          <div>
+            <h2>{{save.name}} {{save.temp}}&deg;</h2>
+          </div>
+          <div>
+            <span>Max:&nbsp;{{save.temp_max}}&deg;</span>
+            <span>Min:&nbsp;{{save.temp_min}}&deg;</span>
+          </div>
 
-        <span>Max:&nbsp;{{myWeather.tempMax}}&deg;</span>
-        <span>Min:&nbsp;{{myWeather.tempMin}}&deg;</span>
+        </div>
 
       </div>
 
-    
     </div>
   </div>
 </div>

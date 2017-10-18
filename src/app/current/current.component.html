@@ -1,20 +1,6 @@
 <div class="container">
   <div class="row  center-block">
     <div class="col-xs-12 text-center">
-    <br>
-
-
-   <form class="form-inline " (ngSubmit)="onSubmit(form)" #form="ngForm">
-      
-      <div class="form-group">
-        
-        <input class="form-control" type="text" ngModel name="city" placeholder="Ciudad">
-        <input class="form-control" type="text" ngModel name="country" placeholder="Pais">
-        <button class=" btn btn-default" name="btn">Buscar</button>
-
-      </div>
-
-   </form>
 
       <br>
       <div class="img-responsive ">
@@ -27,7 +13,21 @@
         <h4>Temperatura Max:&nbsp;{{myWeather.tempMax}}&deg;</h4>
         <h4>Temperatura Min:&nbsp;{{myWeather.tempMin}}&deg;</h4>
       </div>
+        <br><br>
+         <form class="form-inline list-group-item " (ngSubmit)="onSubmit(form)" #form="ngForm">
+
+            <div class="form-group">
+
+              <input class="form-control" type="text" ngModel name="city" placeholder="Ciudad">
+              <input class="form-control" type="text" ngModel name="country" placeholder="Pais">
+              <button class=" btn btn-default" name="btn">Buscar</button>
+
+            </div>
+
+         </form>
 
     </div>
+
+
   </div>
 </div>

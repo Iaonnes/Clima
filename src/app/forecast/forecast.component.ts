@@ -34,7 +34,7 @@ export class ForecastComponent implements OnInit {
   			(data) => {
 
   				console.log(data);
-          
+
           for(let i = 0; i < data.list.length ; i+=8){
 
               const temporary = new Forecast(data.list[i].dt_txt,

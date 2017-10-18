@@ -1,34 +1,43 @@
 
-    <h2 class="text-center">Pronostico por ciudad</h2><br><br>
+<h2 class="text-center">Pronostico por ciudad</h2><br><br>
 
 
-<form class="text-center" [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
-
-    <input type="text" formControlName="forecastCity" placeholder="Ingresa la ciudad">
-    <input type="text" formControlName="forecastCountry" placeholder="Ingresa el pais">
-    <button name="btn">Buscar</button>
-
+<form class="text-center form-inline" [formGroup]="forecastForm" (ngSubmit)="onSubmit()">
+  <div class="col-xs-12">
+    <div class="col-sm-6">
+      <input type="text col-sm-7" class="form-control" formControlName="forecastCity" placeholder="Ingresa la ciudad">
+      <input type="text" class="form-control" formControlName="forecastCountry" placeholder="Ingresa el pais">
+    </div>
+    <div class="col-sm-6">
+      <button class=" btn btn-info-outline" name="btn">Buscar</button>
+    </div>
+  </div>
 </form>
 
 <br><br>
 
-<div class="col-xs-12 text-center">
+<div class="container">
+  <div class="row  center-block">
+    <div class="col-lg-12 text-center">
 
-   <div class="day" *ngFor="let day of cityForecast">
+      <br>
 
-    <h3>{{day.date | date: MMMMd}}</h3>
+      <div class="day list-group-item"  *ngFor="let day of cityForecast">
 
-     <div class="icon">
-       <img src="http://openweathermap.org/img/w/{{day.icon}}.png">
-     </div>
+       <h3>{{day.date | date: MMMMd}}</h3>
 
-    <div class="temp">
-       <h4>Max:{{day.temp_max}}&deg;&nbsp;</h4>
-       <h4>&nbsp;Min:{{day.temp_min}}&deg;</h4>
-       <h4>hum:{{day.humidity}} %</h4>
-       <h4>viento:{{day.speed}} k/h</h4>
+        <div class="icon">
+          <img src="http://openweathermap.org/img/w/{{day.icon}}.png">
+        </div>
+
+       <div class="temp">
+          <h4>Max:{{day.temp_max}}&deg;&nbsp;</h4>
+          <h4>&nbsp;Min:{{day.temp_min}}&deg;</h4>
+          <h4>hum:{{day.humidity}} %</h4>
+          <h4>viento:{{day.speed}} k/h</h4>
+       </div>
     </div>
 
+    </div>
   </div>
-
 </div>
